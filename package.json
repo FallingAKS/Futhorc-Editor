@@ -1,0 +1,22 @@
+{
+  "name": "futhorc-editor",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "electron": "^28.1.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-electron-plugin": "^0.8.3",
+    "vue-tsc": "^1.8.25"
+  },
+  "main": "dist-electron/main.js"
+}
