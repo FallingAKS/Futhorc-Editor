@@ -18,5 +18,39 @@
     "vite-electron-plugin": "^0.8.3",
     "vue-tsc": "^1.8.25"
   },
-  "main": "dist-electron/main.js"
+  "main": "dist-electron/main.js",
+  "build": {
+    "target": "esnext",
+    "outDir": "dist-electron",
+    "assetsDir": ".",
+    "sourcemap": true,
+    "minify": false,
+    "rollupOptions": {
+      "external": [
+        "electron"
+      ],
+      "output": {
+        "entryFileNames": "renderer/[name].js",
+        "chunkFileNames": "renderer/[name].js",
+        "assetFileNames": "[ext]/[name][extname]"
+      }
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "guid": "idea",
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./src/assets/logo.ico",
+      "uninstallerIcon": "./src/assets/logo.ico",
+      "installerHeaderIcon": "./src/assets/logo.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "idea"
+    }
+  }
 }
