@@ -7,7 +7,8 @@ const createWindow = () => {
     win = new BrowserWindow({
         autoHideMenuBar: true,
         width: 1200,
-        height: 800
+        height: 800,
+        icon: 'src/assets/logo.ico',
     })
 
     // process.env.VITE_DEV_SERVER_URL 读取 vue 启动url
